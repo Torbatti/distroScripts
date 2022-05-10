@@ -1,8 +1,11 @@
+#installing ruby is a pain
 #you also need an sql manager -> sqlite / mysql(mariadb)
-sudo pacman -S --needed base-devel git ruby npm yarn 
+sudo pacman -S --needed --noconfirm base-devel git ruby npm yarn sqlite
 
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+#add this to .bashrc .zshrc or .profile
 
-sudo gem update
-sudo gem install rails
+    echo 'export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"' >> ~/.bashrc
+    echo 'export PATH="$PATH:$GEM_HOME/bin"' >> ~/.bashrc
+
+gem update
+gem install rails
