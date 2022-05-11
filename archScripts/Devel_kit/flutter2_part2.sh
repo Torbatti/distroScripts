@@ -6,7 +6,7 @@ flutter doctor --android-licenses
 
 flutter config --enable-linux-desktop
 
-
+flutter upgrade #! this will upgrade dev kits for platforms you activated
 #- linux dev kit
 
     #installing gtk3 
